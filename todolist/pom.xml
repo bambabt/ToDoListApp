@@ -51,7 +51,10 @@
 		</dependency>
 	</dependencies>
 
+	<packaging>war</packaging>
+
 	<build>
+		<finalName>bbt-todolist</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

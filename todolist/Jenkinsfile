@@ -1,0 +1,17 @@
+pipeline {
+    agent any 
+
+    environment {
+        DOCKER_IMAGE = "todolist:latest"
+        KUBERNETES_NAMESPACE = "todolist-namespace"
+    }
+
+    stages {
+        stage('Clone Repository') {
+            steps {
+                echo "Cloning the repository..."
+                git url: 'https://github.com/bambabt/todolistapp.git', branch: 'main'
+            }
+        }
+    }
+}
